@@ -13,5 +13,64 @@
 
     <title>Tip calculator app</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <img src="assets/svg/logo.svg" alt="Logo, splitter text" />
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="calculator">
+        <form class="calculator-form">
+          <div class="numberInput-group">
+            <label for="bill">Bill</label>
+            <input type="text" id="bill" />
+            <span>
+              <img src="assets/svg/icon-dollar.svg" alt="Dolar Icon" />
+            </span>
+          </div>
+
+          <div class="selectTip-group">
+            <button class="button selectTip-button" data-tip="5">5%</button>
+            <button class="button selectTip-button" data-tip="10">10%</button>
+            <button class="button selectTip-button" data-tip="15">15%</button>
+            <button class="button selectTip-button" data-tip="25">25%</button>
+            <button class="button selectTip-button" data-tip="50">50%</button>
+            <button class="button selectTip-custom">Custom</button>
+          </div>
+
+          <div class="numberInput-group">
+            <label for="people">Number of People</label>
+            <input type="number" id="people" />
+            <span>
+              <img src="assets/svg/icon-person.svg" alt="Person Icon" />
+            </span>
+          </div>
+        </form>
+
+        <div class="calculator-output">
+          <div class="priceDisplay">
+            <span class="priceDisplay-title">Tip Amount</span>
+            <span class="priceDisplay-subtitle">/ person</span>
+            <span class="priceDisplay-price">
+              <img src="assets/svg/icon-dollar.svg" alt="Dolar icon" />
+              0.00
+            </span>
+          </div>
+          <div class="priceDisplay">
+            <span class="priceDisplay-title">Total</span>
+            <span class="priceDisplay-subtitle">/ person</span>
+            <span class="priceDisplay-price">
+              <img src="assets/svg/icon-dollar.svg" alt="Dolar icon" />
+              0.00
+            </span>
+          </div>
+          <div class="resetButton-wrapper">
+            <button class="button">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
