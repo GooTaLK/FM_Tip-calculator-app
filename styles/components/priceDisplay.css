@@ -25,13 +25,23 @@
 
     & .dollarIcon {
       display: inline-block;
-      height: 32px;
+      height: 20px;
       aspect-ratio: 11/17;
-      margin-inline: auto 10px;
+      margin-left: auto;
       mask-image: url('../../assets/svg/icon-dollar.svg');
       mask-repeat: no-repeat;
       mask-size: contain;
       background-color: var(--primary);
+    }
+  }
+}
+
+@media (min-width: 780px) {
+  .priceDisplay .price {
+    font-size: 47px;
+
+    & .dollarIcon {
+      height: 30px;
     }
   }
 }
