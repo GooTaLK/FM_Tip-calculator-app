@@ -1,0 +1,19 @@
+.selectTip-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  & .selectTip-custom {
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--grayish-cyan);
+
+    &:hover {
+      border: 3px solid var(--primary);
+    }
+
+    &[contenteditable] {
+      padding: 6px 8px;
+      text-align: right;
+    }
+  }
+}
