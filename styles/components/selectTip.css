@@ -17,3 +17,9 @@
     }
   }
 }
+
+@media (min-width: 580px) {
+  .selectTip-group {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,12 +1,15 @@
 .calculator {
   display: flex;
   flex-wrap: wrap;
+  width: min(920px, 100%);
+  margin-inline: auto;
   gap: 30px;
   padding: 32px;
   background-color: var(--white);
   border-radius: 20px 20px 0 0;
 
   & .calculator-form {
+    width: 100%;
     padding-inline: 8px;
   }
 
@@ -14,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: min(410px, 100%);
+    width: 100%;
     padding: 40px;
     background-color: var(--very-dark-cyan);
     border-radius: 10px;
@@ -28,6 +31,17 @@
         color: var(--very-dark-cyan);
         font-size: 20px;
       }
+    }
+  }
+}
+
+@media (min-width: 780px) {
+  .calculator {
+    border-radius: 20px;
+
+    & .calculator-form,
+    & .calculator-output {
+      width: calc(50% - 15px);
     }
   }
 }
