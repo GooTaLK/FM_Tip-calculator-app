@@ -14,8 +14,17 @@
       background-color: var(--very-light-grayish-cyan);
       color: var(--grayish-cyan);
 
-      &:hover {
+      &.active {
+        text-align: right;
+      }
+
+      &:hover,
+      &:focus {
         border: 3px solid var(--primary);
+      }
+
+      &:focus {
+        cursor: auto;
       }
 
       &[contenteditable] {
