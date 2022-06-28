@@ -1,4 +1,6 @@
 .selectTip-group {
+  margin-bottom: 20px;
+
   & label {
     display: block;
     color: var(--grayish-cyan);
