@@ -1,0 +1,10 @@
+.resetButton-wrapper {
+  width: 100%;
+  margin-top: auto;
+
+  & .button {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 20px;
+  }
+}

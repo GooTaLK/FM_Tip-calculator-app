@@ -1,6 +1,7 @@
 @import './base.css';
 
 @import './components/numberInput.css';
+@import './components/resetButton.css';
 @import './components/button.css';
 @import './components/selectTip.css';
 @import './components/priceDisplay.css';
