@@ -8,7 +8,10 @@
   --light-grayish-cyan: hsl(185, 41%, 84%);
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --red: hsl(12, 35%, 57%);
   --primary: var(--strong-cyan);
+  --secondary: var(--very-dark-cyan);
+  --error: var(--red);
 }
 
 body {
