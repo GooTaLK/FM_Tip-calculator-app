@@ -27,6 +27,7 @@
 @media (min-width: 780px) {
   .calculator {
     border-radius: 20px;
+    box-shadow: 0 20px 20px 10px hsla(180, 40%, 40%, 0.1);
 
     & .calculator-form,
     & .calculator-output {
