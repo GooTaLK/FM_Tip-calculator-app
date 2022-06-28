@@ -1,26 +1,5 @@
 import parseToCents from './utils/parseToCents'
 
-const tipAmountElement = document.querySelector(
-  '.tipAmount .mount'
-) as HTMLElement
-const tipTotalElement = document.querySelector(
-  '.tipTotal .mount'
-) as HTMLElement
-const formElement = document.querySelector(
-  '.calculator-form'
-) as HTMLFormElement
-const billInputElement = document.getElementById('bill') as HTMLInputElement
-const peopleInputElement = document.getElementById('people') as HTMLInputElement
-const selectTipButtonElements = document.querySelectorAll(
-  '.selectTip-button'
-) as NodeListOf<HTMLButtonElement>
-const selectTipCustomElement = document.querySelector(
-  '.selectTip-custom'
-) as HTMLButtonElement
-const resetButtonElement = document.querySelector(
-  '.resetButton-wrapper .button'
-) as HTMLButtonElement
-
 type TipData = {
   bill: number
   tipPercent: number
@@ -28,6 +7,22 @@ type TipData = {
   amountPerPerson: number
   totalAmount: number
 }
+
+const $ = (selector: string) => document.querySelector(selector)
+const $$ = (selector: string) => document.querySelectorAll(selector)
+
+const tipAmountElement = $('.tipAmount .mount') as HTMLElement
+const tipTotalElement = $('.tipTotal .mount') as HTMLElement
+const formElement = $('.calculator-form') as HTMLFormElement
+const billInputElement = document.getElementById('bill') as HTMLInputElement
+const peopleInputElement = document.getElementById('people') as HTMLInputElement
+const selectTipButtonElements = $$(
+  '.selectTip-button'
+) as NodeListOf<HTMLButtonElement>
+const selectTipCustomElement = $('.selectTip-custom') as HTMLButtonElement
+const resetButtonElement = $(
+  '.resetButton-wrapper .button'
+) as HTMLButtonElement
 
 let tipData: TipData = {
   bill: 0,
