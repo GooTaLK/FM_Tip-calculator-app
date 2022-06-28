@@ -19,7 +19,7 @@
     align-items: center;
     width: 100%;
     padding: 25px;
-    background-color: var(--very-dark-cyan);
+    background-color: var(--secondary);
     border-radius: 10px;
 
     & .resetButton-wrapper {
@@ -28,7 +28,7 @@
 
       & .button {
         background-color: var(--primary);
-        color: var(--very-dark-cyan);
+        color: var(--secondary);
         font-size: 20px;
       }
     }
