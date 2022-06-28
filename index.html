@@ -27,7 +27,13 @@
         <form class="calculator-form">
           <div class="numberInput-group">
             <label for="bill">Bill</label>
-            <input type="number" id="bill" />
+            <input
+              type="number"
+              step="0.01"
+              min="0"
+              id="bill"
+              placeholder="0"
+            />
             <span class="numberInput-icon">
               <img src="assets/svg/icon-dollar.svg" alt="Dollar Icon" />
             </span>
@@ -41,13 +47,17 @@
               <button class="button selectTip-button" data-tip="15">15%</button>
               <button class="button selectTip-button" data-tip="25">25%</button>
               <button class="button selectTip-button" data-tip="50">50%</button>
-              <button class="button selectTip-custom">Custom</button>
+              <input
+                class="button selectTip-custom"
+                value="Custom"
+                type="button"
+              />
             </div>
           </div>
 
           <div class="numberInput-group">
             <label for="people">Number of People</label>
-            <input type="number" id="people" />
+            <input type="number" step="1" min="0" id="people" placeholder="0" />
             <span class="numberInput-icon">
               <img src="assets/svg/icon-person.svg" alt="Person Icon" />
             </span>
@@ -55,24 +65,25 @@
         </form>
 
         <div class="calculator-output">
-          <div class="priceDisplay">
+          <div class="priceDisplay tipAmount">
             <span class="title">Tip Amount</span>
             <span class="subtitle">/ person</span>
             <span class="price">
               <span class="dollarIcon"></span>
-              0.00
+              <span class="mount">0.00</span>
             </span>
           </div>
-          <div class="priceDisplay">
+          <div class="priceDisplay tipTotal">
             <span class="title">Total</span>
             <span class="subtitle">/ person</span>
-            <span class="price"
-              ><span class="dollarIcon"></span>
-              0.00
+            <!-- ? Este subtítulo no tiene sentido, ¿Debo cambiarlo? -->
+            <span class="price">
+              <span class="dollarIcon"></span>
+              <span class="mount">0.00</span>
             </span>
           </div>
           <div class="resetButton-wrapper">
-            <button class="button">RESET</button>
+            <button class="button" disabled>RESET</button>
           </div>
         </div>
       </div>
