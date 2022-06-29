@@ -8,11 +8,8 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+- [Built with](#built-with)
+- [Local deployment](#local-deployment)
 - [Author](#author)
 
 ## Overview
@@ -34,9 +31,7 @@ Users should be able to:
 - Solution URL: [Github page](https://github.com/GootaLK/FM_Tip-calculator-app)
 - Live Site URL: [Live on Vercel](https://goota-tip-calculator.vercel.app/)
 
-## My process
-
-### Built with
+## Built with
 
 For this challenge I decided not to use frameworks. I just made use of some typescript.
 I also used pnpm as package manager, vite as bundler, so nesting and autoprefixer postcss plugins.
@@ -47,21 +42,22 @@ I also used pnpm as package manager, vite as bundler, so nesting and autoprefixe
 - Mobile-first workflow
 - Typescript
 
-### What I learned
+## Local deployment
 
-...
+To local deploy you need run:
 
-### Continued development
+```bash
+pnpm build
+```
 
-...
+then
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+```bash
+pnpm preview
+```
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@GootaLK](https://www.frontendmentor.io/profile/GootaLK)
 
 **No social media yet**
