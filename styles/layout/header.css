@@ -2,5 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vmin;
+  height: 22vmin;
+  margin-top: 40px;
+
+  & .logo {
+    margin: 0;
+  }
 }
