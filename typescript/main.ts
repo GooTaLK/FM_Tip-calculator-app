@@ -5,14 +5,14 @@ type TipData = {
   tipPercent: number
   people: number | ''
   amountPerPerson: number
-  totalAmount: number
+  totalAmountPerPerson: number
 }
 
 const $ = (selector: string) => document.querySelector(selector)
 const $$ = (selector: string) => document.querySelectorAll(selector)
 
 const tipAmountElement = $('.tipAmount .mount') as HTMLElement
-const tipTotalElement = $('.tipTotal .mount') as HTMLElement
+const totalAmountElement = $('.totalAmount .mount') as HTMLElement
 const formElement = $('.calculator-form') as HTMLFormElement
 const billInputElement = document.getElementById('bill') as HTMLInputElement
 const peopleInputElement = document.getElementById('people') as HTMLInputElement
@@ -29,7 +29,7 @@ let tipData: TipData = {
   tipPercent: 0,
   people: '',
   amountPerPerson: 0,
-  totalAmount: 0,
+  totalAmountPerPerson: 0,
 }
 
 function updateTipData({
@@ -37,15 +37,17 @@ function updateTipData({
   tipPercent = tipData.tipPercent,
   people = tipData.people,
 }) {
-  let totalAmount = 0
+  let totalAmountPerPerson = 0
   let amountPerPerson = 0
 
   if (typeof people === 'number' && people > 0 && bill > 0 && tipPercent > 0) {
-    totalAmount = (bill * tipPercent) / 100
-    amountPerPerson = totalAmount / Math.ceil(people)
+    const totalTip = (bill * tipPercent) / 100
+
+    amountPerPerson = totalTip / Math.ceil(people)
+    totalAmountPerPerson = bill / Math.ceil(people) + amountPerPerson
   }
 
-  tipData = { bill, tipPercent, people, totalAmount, amountPerPerson }
+  tipData = { bill, tipPercent, people, totalAmountPerPerson, amountPerPerson }
 }
 
 function printInputsWarning() {
@@ -62,13 +64,13 @@ function disableResetButton(disabled = true) {
 }
 
 function printTipData() {
-  tipData.totalAmount === 0 && tipData.amountPerPerson === 0
+  tipData.totalAmountPerPerson === 0 && tipData.amountPerPerson === 0
     ? disableResetButton()
     : disableResetButton(false)
 
   printInputsWarning()
   tipAmountElement.textContent = parseToCents(tipData.amountPerPerson)
-  tipTotalElement.textContent = parseToCents(tipData.totalAmount)
+  totalAmountElement.textContent = parseToCents(tipData.totalAmountPerPerson)
 }
 
 function changeTypeOfSelectTipCustom(type: 'button' | 'number') {
